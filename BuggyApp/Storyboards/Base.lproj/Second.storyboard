@@ -80,7 +80,6 @@
                                             <outlet property="artworkImageView" destination="F7m-Ua-SuA" id="JqL-aX-oEb"/>
                                             <outlet property="priceLabel" destination="MGF-sj-HIA" id="xmh-mo-289"/>
                                             <outlet property="trackLabel" destination="Ttf-K6-1HC" id="eyY-gU-JZz"/>
-                                            <segue destination="cUH-eN-7PC" kind="show" identifier="selected" id="ynz-OF-x8V"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -308,7 +307,4 @@
         <image name="first" width="30" height="30"/>
         <image name="second" width="30" height="30"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="ynz-OF-x8V"/>
-    </inferredMetricsTieBreakers>
 </document>

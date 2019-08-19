@@ -17,6 +17,7 @@ class MusicTracksViewController: UIViewController {
       tableView.reloadData()
     }
   }
+
     
   
   override func viewDidLoad() {
@@ -38,13 +39,17 @@ class MusicTracksViewController: UIViewController {
   }
   
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    if segue.identifier == "selected",
-      let viewController = segue.destination as? MusicTrackDetailViewController,
-      let selectedTrack = sender as? Track {
-      viewController.track = selectedTrack
+    if segue.identifier == "showDetail",
+        
+        let viewController = segue.destination as? MusicTrackDetailViewController,
+        let selectedTrack = sender as? Track {
+        ////
+        viewController.track = selectedTrack
+        
     }
   }
 }
+
 
 extension MusicTracksViewController: UITableViewDataSource {
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -67,6 +72,7 @@ extension MusicTracksViewController: UITableViewDelegate {
   }
   
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    performSegue(withIdentifier: "showDetail", sender: tracks[indexPath.row])
     tableView.deselectRow(at: indexPath, animated: true)
   }
 }
