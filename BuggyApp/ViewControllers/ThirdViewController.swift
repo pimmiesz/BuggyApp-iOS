@@ -8,9 +8,16 @@
 
 import UIKit
 
-class ThirdViewController: UIViewController {
-  override func viewDidLoad() {
+class ThirdViewController: UIViewController, UITextFieldDelegate {
+    @IBAction func send(_ sender: Any) {
+        print(textField.text)
+    }
+    @IBOutlet weak var textField: UITextField!
+    override func viewDidLoad() {
     super.viewDidLoad()
+    self.textField.delegate = self
     // Do any additional setup after loading the view.
   }
+    
+   
 }

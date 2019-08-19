@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jxy-YT-Xsr">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="140" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jxy-YT-Xsr">
                                 <rect key="frame" x="0.0" y="111" width="320" height="457"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
@@ -80,10 +80,12 @@
                                             <outlet property="artworkImageView" destination="F7m-Ua-SuA" id="JqL-aX-oEb"/>
                                             <outlet property="priceLabel" destination="MGF-sj-HIA" id="xmh-mo-289"/>
                                             <outlet property="trackLabel" destination="Ttf-K6-1HC" id="eyY-gU-JZz"/>
+                                            <segue destination="cUH-eN-7PC" kind="show" identifier="selected" id="ynz-OF-x8V"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
+                                    <outlet property="dataSource" destination="8rJ-Kc-sve" id="Vp4-6H-ccF"/>
                                     <outlet property="delegate" destination="8rJ-Kc-sve" id="da3-bz-R5l"/>
                                 </connections>
                             </tableView>
@@ -306,4 +308,7 @@
         <image name="first" width="30" height="30"/>
         <image name="second" width="30" height="30"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="ynz-OF-x8V"/>
+    </inferredMetricsTieBreakers>
 </document>
